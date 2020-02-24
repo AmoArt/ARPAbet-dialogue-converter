@@ -1,0 +1,49 @@
+How to use this python script.
+
+First you need a text with list of ARPAbet words:
+
+DEGER   D IY1 G ER0
+DEGIACOMO   D IY1 JH AH0 K OW0 M OW0
+DEGIDIO   D IH0 JH IY1 D IY0 OW0
+DEGIROLAMO   D IH0 JH IH0 R OW0 L AA1 M OW0
+
+and so on, you can download the entire dictionary lexicon from "The CMU Pronouncing Dictionary", for custom words 
+(like names from fantasy or scifi tv shows) you will need to create a seperate text file and write them in in same way its written above.
+Place those files in folder 'dictionares'. It would be recommended to keep those seperated for futureproofing editing.
+(PS do not use microsoft Notepad as it adds \ufffd characters when saving txt files)
+
+
+###
+Second you need to have prepared seperate text file with list of all your files attached to correct writting (missing/misspelling files will cause errors)
+The following format should look something like this:
+audio.wav|dialogue;
+
+For example after runing script on file containing this:
+
+audiofile0001.wav|Hello.;
+wavs/00_04_02__What can we do.wav|What can we do?!;
+
+
+we will get this:
+
+audiofile0001.wav|{HH AH0 L OW1}.;
+wavs/00_04_02__What can we do.wav|{W AH1 T} {K AE1 N} {W IY1} {D UW1}?!;
+
+
+###
+Run 
+_ARPAbet dictionary PART A _fin.py
+
+This will combine all the files in folder 'dictionares'
+
+
+###
+Run 
+_ARPAbet dictionary PART B _fin.py
+
+This script will create python dictionary out of the 'raw_ARPAbet.txt' and apply to the dialogue file.
+To check if all the words were converted open the 'OUTPUT_ARPAbet.txt' in Notepad++ and use Regex code 
+(\{).*?(\}) to remove all the arpabet words, any words that were left out need to be added to 
+custom text file in  'dictionares' folder, than converted to proper arpabet pronunciation.
+
+
