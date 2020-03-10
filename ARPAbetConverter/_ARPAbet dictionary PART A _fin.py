@@ -2,7 +2,7 @@ import os
 import os.path
 import re
 
-kek = 0
+
 
 def rawARPAbet():
     directory = "dictionaries/"
@@ -13,7 +13,7 @@ def rawARPAbet():
     nah = 0
     for f in all_dic:
         nah += 1
-
+    kek = 0
     blankTXT = ''
     
     for f in all_dic:
@@ -33,7 +33,7 @@ def rawARPAbet():
            # c=re.sub(',', '   ')
             blankTXT += c
         blankTXT += "\n"        
-        
+        print(all_dic[kek])
         kek += 1
      #   print(c)
     print(dic_list)
@@ -58,4 +58,4 @@ except:
     print("""raw_ARPAbet.txt do not exist or cannot be created,
           check if the folder 'dictionariesIPA' exist in same directory as
           PY file and if it contains text files (encode UTF-8)""")
-    print(kek)
+    #print(kek)
