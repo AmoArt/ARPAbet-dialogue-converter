@@ -2,6 +2,8 @@ import os
 import os.path
 import re
 
+kek = 0
+
 def rawARPAbet():
     directory = "dictionaries/"
     all_dic = os.listdir(directory)
@@ -13,7 +15,7 @@ def rawARPAbet():
         nah += 1
 
     blankTXT = ''
-    kek = 0
+    
     for f in all_dic:
         dic_list = open(str(directory + all_dic[kek]), 'r', encoding='utf-8') #utf-16-le #utf-8
         for line in dic_list:
@@ -31,7 +33,7 @@ def rawARPAbet():
            # c=re.sub(',', '   ')
             blankTXT += c
         blankTXT += "\n"        
-        print(all_dic[kek])
+        
         kek += 1
      #   print(c)
     print(dic_list)
