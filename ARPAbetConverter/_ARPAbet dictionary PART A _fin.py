@@ -31,7 +31,7 @@ def rawARPAbet():
            # c=re.sub(',', '   ')
             blankTXT += c
         blankTXT += "\n"        
-        
+        print(all_dic[kek])
         kek += 1
      #   print(c)
     print(dic_list)
