@@ -35,3 +35,8 @@ Save them into new text file in dictionaries folder, use the words in other ARPA
 
 
 PS. Before using the script it would be recomend to convert any special symols such as "…" either into asci friendly format ("...") or just remove them with 'replace' tool as python script may in rare occasion have trouble handling those kind of elements.
+
+- - - - -
+
+I've been recently informed that training the TTS models from scratch using the semicolon ";" (or commas "," and fullstops ".") at the very end of line is causing the TTS models to cause troubles when generating audio unless all the input text has those symbols forced at the end of the input text.
+Aparetly it isn't as big of problem when finetuning the data on another model so I've decided not to edit the code but it may be advised for you to use a text program to remove those if it causes your model problems.
